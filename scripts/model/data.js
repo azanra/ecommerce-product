@@ -1,10 +1,10 @@
-export default product = [
+export const data = [
   {
     id: 0,
     name: "Fall Limited Edition Sneakers",
     description:
       "These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer",
-    originalPrice: 125,
+    originalPrice: 250,
     discount: "50%",
     images: [
       {

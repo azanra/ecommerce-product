@@ -15,4 +15,9 @@ export default class Shoes {
   set amount(newAmount) {
     this.#amount = newAmount;
   }
+  get currentPrice() {
+    const PERCENTAGE = 100;
+    const discountPercentage = parseFloat(this.discount) / PERCENTAGE;
+    return discountPercentage * this.originalPrice;
+  }
 }
