@@ -9,4 +9,10 @@ export default class Shoes {
     this.images = images;
     this.#amount = 0;
   }
+  get amount() {
+    return this.#amount;
+  }
+  set amount(newAmount) {
+    this.#amount = newAmount;
+  }
 }
