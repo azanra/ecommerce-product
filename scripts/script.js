@@ -14,6 +14,8 @@ const firstShoes = new Shoes(
 console.log(firstShoes);
 console.log(firstShoes.amount);
 
-console.log((firstShoes.amount = 10));
+console.log((firstShoes.amount = 3));
 
 console.log(firstShoes.currentPrice);
+
+console.log(firstShoes.totalPrice);
