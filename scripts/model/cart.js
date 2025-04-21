@@ -19,4 +19,11 @@ export default class Cart {
       }
     });
   }
+  decrementProduct(itemId) {
+    this.#cart.map((item) => {
+      if (item.id === itemId) {
+        item.amount = --item.amount;
+      }
+    });
+  }
 }
