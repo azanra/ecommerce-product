@@ -6,6 +6,9 @@ export default class Cart {
   get cart() {
     return this.#cart;
   }
+  set cart(value) {
+    this.#cart = value;
+  }
   addToTheCart(item) {
     this.#cart.push(item);
   }
