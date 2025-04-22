@@ -8,7 +8,7 @@ export default class Element {
   createElement(uniqueId) {
     const parentElement = document.querySelector(this.parentElement);
     const newElement = document.createElement(this.element);
-    newElement.textContent = this.textContent;
+    this.setTextContent(newElement);
     this.setAttribute(newElement, uniqueId);
     parentElement.append(newElement);
   }
@@ -19,6 +19,11 @@ export default class Element {
       } else {
         newElement.setAttribute(key, this.attribute[key]);
       }
+    }
+  }
+  setTextContent(element) {
+    if (this.textContent !== undefined) {
+      element.textContent = this.textContent;
     }
   }
 }
