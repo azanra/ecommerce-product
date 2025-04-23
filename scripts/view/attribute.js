@@ -1,10 +1,11 @@
-export const attributeElement = {
+export const attribute = {
   cartContainer: {
     parent: ".cart",
     element: "div",
     attributeElement: {
       class: "cartContainer",
     },
+    uniqueParent: false,
   },
   cartHeader: {
     parent: ".cartContainer",
@@ -12,6 +13,7 @@ export const attributeElement = {
     attributeElement: {
       class: "cartHeader",
     },
+    uniqueParent: false,
   },
   cartBody: {
     parent: ".cartContainer",
@@ -19,5 +21,15 @@ export const attributeElement = {
     attributeElement: {
       class: "cartBody",
     },
+    uniqueParent: false,
+  },
+  itemContainer: {
+    parent: ".cartBody",
+    element: "div",
+    attributeElement: {
+      class: "itemContainer",
+      id: "itemContainer",
+    },
+    uniqueParent: true,
   },
 };

@@ -1,18 +1,19 @@
 import { attribute } from "./attribute.js";
 
 export default class Element {
-  static createElement(attribute) {
+  static createElement(attribute, uniqueId) {
     const parentElement = document.querySelector(attribute.parent);
     const newElement = document.createElement(attribute.element);
     Element.setTextContent(newElement, attribute.textContent);
+    Element.setUniqueId(attribute, uniqueId);
     Element.setAttribute(newElement, attribute.attributeElement);
     parentElement.append(newElement);
   }
 
   static setAttribute(newElement, attribute) {
     for (const key in attribute) {
-      if (key === "id" && uniqueId !== undefined) {
-        newElement.setAttribute(key, `${attribute[key]}-${uniqueId}`);
+      if (key === "id" && attribute.uniqueId !== undefined) {
+        newElement.setAttribute(key, `${attribute[key]}-${attribute.uniqueId}`);
       } else {
         newElement.setAttribute(key, attribute[key]);
       }
@@ -25,12 +26,20 @@ export default class Element {
     }
   }
 
-  createCartItem(cart) {
+  static setUniqueId(attribute, uniqueId) {
+    if (attribute.uniqueParent === true) {
+      attribute.attributeElement.id = `${attribute.attributeElement.id}-${uniqueId}`;
+    }
+  }
+
+  createCartContainer(cart) {
     Element.createElement(attribute.cartContainer);
     Element.createElement(attribute.cartHeader);
     Element.createElement(attribute.cartBody);
     if (cart.length > 0) {
-      cart.map((item) => {});
+      cart.map((item) => {
+        Element.createElement(attribute.itemContainer, item.id);
+      });
     }
   }
 }
