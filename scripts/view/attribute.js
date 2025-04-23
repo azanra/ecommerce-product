@@ -1,22 +1,22 @@
-export const attribute = {
+export const attributeElement = {
   cartContainer: {
     parent: ".cart",
     element: "div",
-    attribute: {
+    attributeElement: {
       class: "cartContainer",
     },
   },
   cartHeader: {
     parent: ".cartContainer",
     element: "div",
-    attribute: {
+    attributeElement: {
       class: "cartHeader",
     },
   },
   cartBody: {
     parent: ".cartContainer",
     element: "div",
-    attribute: {
+    attributeElement: {
       class: "cartBody",
     },
   },
