@@ -1,3 +1,5 @@
+import { attribute } from "./attribute.js";
+
 export default class Element {
   static createElement(parent, element, attribute, textContent) {
     const parentElement = document.querySelector(parent);
@@ -19,5 +21,24 @@ export default class Element {
     if (textContent !== undefined) {
       element.textContent = textContent;
     }
+  }
+  createCartItem(cart) {
+    cart.map((item) => {
+      Element.createElement(
+        attribute.cartContainer.parent,
+        attribute.cartContainer.element,
+        attribute.cartContainer.attribute
+      );
+      Element.createElement(
+        attribute.cartHeader.parent,
+        attribute.cartHeader.element,
+        attribute.cartHeader.attribute
+      );
+      Element.createElement(
+        attribute.cartBody.parent,
+        attribute.cartBody.element,
+        attribute.cartBody.attribute
+      );
+    });
   }
 }
