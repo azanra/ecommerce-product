@@ -40,6 +40,10 @@ export default class Element {
     }
   }
 
+  static appendSrcAttribute(attribute, srcAttr) {
+    attribute.src = srcAttr;
+  }
+
   createCartContainer(cart) {
     Element.createElement(attribute.cartContainer);
     Element.createElement(attribute.cartHeader);
@@ -48,6 +52,11 @@ export default class Element {
       cart.map((item) => {
         Element.createElement(attribute.itemContainer, item.id);
         Element.createElement(attribute.imageContainer, item.id);
+        Element.appendSrcAttribute(
+          attribute.productImage.attributeElement,
+          item.images[0].thumbnail
+        );
+        Element.createElement(attribute.productImage, item.id);
       });
     }
   }

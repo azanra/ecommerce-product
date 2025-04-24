@@ -30,6 +30,24 @@ export const attribute = {
       class: "itemContainer",
       id: "itemContainer",
     },
+    uniqueParent: false,
+  },
+  imageContainer: {
+    parent: "#itemContainer",
+    element: "div",
+    attributeElement: {
+      class: "imageContainer",
+      id: "imageContainer",
+    },
+    uniqueParent: true,
+  },
+  productImage: {
+    parent: "#imageContainer",
+    element: "img",
+    attributeElement: {
+      class: "productImage",
+      id: "productImage",
+    },
     uniqueParent: true,
   },
 };
