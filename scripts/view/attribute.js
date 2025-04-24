@@ -50,4 +50,22 @@ export const attribute = {
     },
     uniqueParent: true,
   },
+  infoContainer: {
+    parent: "#itemContainer",
+    element: "div",
+    attributeElement: {
+      class: "infoContainer",
+      id: "infoContainer",
+    },
+    uniqueParent: true,
+  },
+  productName: {
+    parent: "#infoContainer",
+    element: "p",
+    attributeElement: {
+      class: "productName",
+      id: "productName",
+    },
+    uniqueParent: true,
+  },
 };

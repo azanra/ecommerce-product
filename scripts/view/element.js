@@ -44,6 +44,10 @@ export default class Element {
     attribute.src = srcAttr;
   }
 
+  static appendNameText(attribute, name) {
+    attribute.textContent = name;
+  }
+
   createCartContainer(cart) {
     Element.createElement(attribute.cartContainer);
     Element.createElement(attribute.cartHeader);
@@ -57,6 +61,9 @@ export default class Element {
           item.images[0].thumbnail
         );
         Element.createElement(attribute.productImage, item.id);
+        Element.createElement(attribute.infoContainer, item.id);
+        Element.appendNameText(attribute.productName, item.name);
+        Element.createElement(attribute.productName, item.id);
       });
     }
   }
