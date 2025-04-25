@@ -68,4 +68,40 @@ export const attribute = {
     },
     uniqueParent: true,
   },
+  priceContainer: {
+    parent: "#infoContainer",
+    element: "div",
+    attributeElement: {
+      class: "priceContainer",
+      id: "priceContainer",
+    },
+    uniqueParent: true,
+  },
+  productPrice: {
+    parent: "#priceContainer",
+    element: "span",
+    attributeElement: {
+      class: "productPrice",
+      id: "productPrice",
+    },
+    uniqueParent: true,
+  },
+  productAmount: {
+    parent: "#priceContainer",
+    element: "span",
+    attributeElement: {
+      class: "productAmount",
+      id: "productAmount",
+    },
+    uniqueParent: true,
+  },
+  productTotalPrice: {
+    parent: "#priceContainer",
+    element: "span",
+    attributeElement: {
+      class: "productTotalPrice",
+      id: "productTotalPrice",
+    },
+    uniqueParent: true,
+  },
 };

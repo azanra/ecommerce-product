@@ -44,8 +44,8 @@ export default class Element {
     attribute.src = srcAttr;
   }
 
-  static appendNameText(attribute, name) {
-    attribute.textContent = name;
+  static appendText(attribute, text) {
+    attribute.textContent = text;
   }
 
   createCartContainer(cart) {
@@ -62,8 +62,18 @@ export default class Element {
         );
         Element.createElement(attribute.productImage, item.id);
         Element.createElement(attribute.infoContainer, item.id);
-        Element.appendNameText(attribute.productName, item.name);
+        Element.appendText(attribute.productName, item.name);
         Element.createElement(attribute.productName, item.id);
+        Element.createElement(attribute.priceContainer, item.id);
+        Element.appendText(attribute.productPrice, `$${item.currentPrice}.00`);
+        Element.createElement(attribute.productPrice, item.id);
+        Element.appendText(attribute.productAmount, ` x ${item.amount}`);
+        Element.createElement(attribute.productAmount, item.id);
+        Element.appendText(
+          attribute.productTotalPrice,
+          ` $${item.totalPrice}.00`
+        );
+        Element.createElement(attribute.productTotalPrice, item.id);
       });
     }
   }
