@@ -74,6 +74,8 @@ export default class Element {
           ` $${item.totalPrice}.00`
         );
         Element.createElement(attribute.productTotalPrice, item.id);
+        Element.createElement(attribute.removeContainer, item.id);
+        Element.createElement(attribute.removeButton, item.id);
       });
     }
   }

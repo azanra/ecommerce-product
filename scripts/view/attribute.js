@@ -13,6 +13,7 @@ export const attribute = {
     attributeElement: {
       class: "cartHeader",
     },
+    textContent: "Cart",
     uniqueParent: false,
   },
   cartBody: {
@@ -101,6 +102,25 @@ export const attribute = {
     attributeElement: {
       class: "productTotalPrice",
       id: "productTotalPrice",
+    },
+    uniqueParent: true,
+  },
+  removeContainer: {
+    parent: "#itemContainer",
+    element: "div",
+    attributeElement: {
+      class: "removeContainer",
+      id: "removeContainer",
+    },
+    uniqueParent: true,
+  },
+  removeButton: {
+    parent: "#removeContainer",
+    element: "button",
+    attributeElement: {
+      type: "button",
+      class: "removeButton",
+      id: "removeButton",
     },
     uniqueParent: true,
   },
