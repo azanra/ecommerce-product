@@ -124,4 +124,24 @@ export const attribute = {
     },
     uniqueParent: true,
   },
+  checkoutContainer: {
+    parent: ".cartBody",
+    element: "div",
+    attributeElement: {
+      class: "checkoutContainer",
+      id: "checkoutContainer",
+    },
+    uniqueParent: false,
+  },
+  checkoutButton: {
+    parent: "#checkoutContainer",
+    element: "button",
+    attributeElement: {
+      type: "button",
+      class: "checkoutButton",
+      id: "checkoutButton",
+    },
+    textContent: "Checkout",
+    uniqueParent: false,
+  },
 };

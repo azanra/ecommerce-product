@@ -78,5 +78,7 @@ export default class Element {
         Element.createElement(attribute.removeButton, item.id);
       });
     }
+    Element.createElement(attribute.checkoutContainer);
+    Element.createElement(attribute.checkoutButton);
   }
 }
