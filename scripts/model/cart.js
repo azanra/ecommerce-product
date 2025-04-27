@@ -24,8 +24,10 @@ export default class Cart {
   }
   decrementProduct(itemId) {
     this.#cart.map((item) => {
-      if (item.id === itemId) {
+      if (item.id === itemId && item.amount > 0) {
         item.amount = --item.amount;
+      } else {
+        alert("Cant be negative!");
       }
     });
   }
