@@ -19,4 +19,11 @@ export default class Controller {
       this.amountCart.textContent = this.#cart.returnItemAmount(itemId);
     });
   }
+  decrementAmountListener() {
+    this.decrementBtn.addEventListener("click", () => {
+      const itemId = Controller.getTheItemId(this.decrementBtn);
+      this.#cart.decrementProduct(itemId);
+      this.amountCart.textContent = this.#cart.returnItemAmount(itemId);
+    });
+  }
 }
