@@ -29,4 +29,13 @@ export default class Cart {
       }
     });
   }
+  returnItemAmount(itemId) {
+    let amount;
+    this.#cart.map((item) => {
+      if (item.id === itemId) {
+        amount = item.amount;
+      }
+    });
+    return amount;
+  }
 }
