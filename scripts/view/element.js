@@ -5,8 +5,8 @@ export default class Element {
     const parentElement = Element.referenceParent(attribute, uniqueId);
     const newElement = document.createElement(attribute.element);
     Element.setTextContent(newElement, attribute.textContent);
-    Element.setUniqueId(attribute, uniqueId);
-    Element.setAttribute(newElement, attribute.attributeElement);
+    const newAttribute = Element.setUniqueId(attribute, uniqueId);
+    Element.setAttribute(newElement, newAttribute.attributeElement);
     parentElement.append(newElement);
   }
 
@@ -27,8 +27,12 @@ export default class Element {
   }
 
   static setUniqueId(attribute, uniqueId) {
+    let newAttribute = JSON.parse(JSON.stringify(attribute));
     if (uniqueId !== undefined) {
-      attribute.attributeElement.id = `${attribute.attributeElement.id}-${uniqueId}`;
+      newAttribute.attributeElement.id = `${newAttribute.attributeElement.id}-${uniqueId}`;
+      return newAttribute;
+    } else {
+      return newAttribute;
     }
   }
 
