@@ -1,0 +1,6 @@
+.removeButton {
+  background: center no-repeat url("../assets/images/icon-delete.svg");
+  width: 25px;
+  height: 25px;
+  border: none;
+}
