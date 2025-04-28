@@ -1,8 +1,12 @@
+import Element from "../view/element.js";
+
 export default class Controller {
   #cart;
   decrementBtn = document.querySelector(".decrementAction");
   incrementBtn = document.querySelector(".incrementAction");
   amountCart = document.querySelector(".amountCartText");
+  addToCartBtn = document.querySelector(".addToCartBtn");
+  cartView = new Element();
   constructor(cart) {
     this.#cart = cart;
   }
@@ -24,6 +28,12 @@ export default class Controller {
       const itemId = Controller.getTheItemId(this.decrementBtn);
       this.#cart.decrementProduct(itemId);
       this.amountCart.textContent = this.#cart.returnItemAmount(itemId);
+    });
+  }
+  addToTheCartListener() {
+    this.addToCartBtn.addEventListener("click", () => {
+      Element.removeElement(".cartContainer");
+      this.cartView.createCartContainer(this.#cart.cart);
     });
   }
 }
