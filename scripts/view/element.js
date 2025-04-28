@@ -52,6 +52,13 @@ export default class Element {
     attribute.textContent = text;
   }
 
+  static removeElement(inputtedElement) {
+    const element = document.querySelector(inputtedElement);
+    if (element) {
+      element.remove();
+    }
+  }
+
   createCartContainer(cart) {
     Element.createElement(attribute.cartContainer);
     Element.createElement(attribute.cartHeader);
