@@ -59,6 +59,15 @@ export default class Element {
     }
   }
 
+  static removeAllItem() {
+    const itemContainer = document.querySelectorAll(".itemContainer");
+    itemContainer.forEach((item) => {
+      if (item) {
+        item.remove();
+      }
+    });
+  }
+
   createCartContainer(cart) {
     Element.createElement(attribute.cartContainer);
     Element.createElement(attribute.cartHeader);
