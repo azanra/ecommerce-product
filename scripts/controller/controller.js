@@ -34,6 +34,18 @@ export default class Controller {
     this.addToCartBtn.addEventListener("click", () => {
       Element.removeElement(".cartContainer");
       this.cartView.createCartContainer(this.#cart.cart);
+      this.removeItemListener();
+    });
+  }
+  removeItemListener() {
+    const removeBtn = document.querySelectorAll(".removeButton");
+    removeBtn.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const itemId = Controller.getTheItemId(btn);
+        this.#cart.removeFromTheCart(itemId);
+        Element.removeAllItem();
+        Element.setTextContent(this.amountCart, "0");
+      });
     });
   }
 }
