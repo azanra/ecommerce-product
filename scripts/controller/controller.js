@@ -6,6 +6,8 @@ export default class Controller {
   incrementBtn = document.querySelector(".incrementAction");
   amountCart = document.querySelector(".amountCartText");
   addToCartBtn = document.querySelector(".addToCartBtn");
+  nextBtn = document.querySelector(".nextBtn");
+  previousBtn = document.querySelector(".previousBtn");
   cartView = new Element();
   constructor(cart) {
     this.#cart = cart;
@@ -57,6 +59,26 @@ export default class Controller {
         const imgUrl = thumbnailImage.replace("-thumbnail", "");
         largeProductImage.children[0].src = imgUrl;
       });
+    });
+  }
+  imageSwapListener() {
+    const modalImgContainer = document.querySelector(".modalPictureContainer");
+    const SHOES_ID = 0;
+    let currentImageIndex = 0;
+    const imageAttribute = this.#cart.returnProductImages(SHOES_ID);
+    const imageSrc = JSON.parse(JSON.stringify(imageAttribute));
+    this.nextBtnListener(currentImageIndex, imageSrc, modalImgContainer);
+  }
+  nextBtnListener(currentImageIndex, imageSrc, modalImgContainer) {
+    this.nextBtn.addEventListener("click", () => {
+      if (currentImageIndex >= 0 && currentImageIndex < 3) {
+        modalImgContainer.children[0].src =
+          imageSrc[++currentImageIndex].original;
+      } else {
+        currentImageIndex = 0;
+        modalImgContainer.children[0].src =
+          imageSrc[currentImageIndex].original;
+      }
     });
   }
 }
