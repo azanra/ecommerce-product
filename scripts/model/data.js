@@ -20,8 +20,8 @@ export const data = [
         thumbnail: "./assets/images/image-product-3-thumbnail.jpg",
       },
       {
-        original: "./assets/images/image-product-3.jpg",
-        thumbnail: "./assets/images/image-product-3-thumbnail.jpg",
+        original: "./assets/images/image-product-4.jpg",
+        thumbnail: "./assets/images/image-product-4-thumbnail.jpg",
       },
     ],
   },
