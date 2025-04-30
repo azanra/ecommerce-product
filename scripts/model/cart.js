@@ -44,4 +44,13 @@ export default class Cart {
     });
     return amount;
   }
+  returnProductImages(itemId) {
+    let images;
+    this.#cart.map((item) => {
+      if (item.id === itemId) {
+        images = item.images;
+      }
+    });
+    return images;
+  }
 }
