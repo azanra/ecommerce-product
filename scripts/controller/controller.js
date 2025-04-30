@@ -48,4 +48,15 @@ export default class Controller {
       });
     });
   }
+  thumbnailListener(largeImageElement, thumbnailImageElement) {
+    const largeProductImage = document.querySelector(largeImageElement);
+    const thumbnailImage = document.querySelectorAll(thumbnailImageElement);
+    thumbnailImage.forEach((item) => {
+      item.addEventListener("click", () => {
+        const thumbnailImage = item.children[0].src;
+        const imgUrl = thumbnailImage.replace("-thumbnail", "");
+        largeProductImage.children[0].src = imgUrl;
+      });
+    });
+  }
 }
