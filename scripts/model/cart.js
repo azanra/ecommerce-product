@@ -53,4 +53,9 @@ export default class Cart {
     });
     return images;
   }
+  resetAllAmount() {
+    this.#cart.map((item) => {
+      item.amount = 0;
+    });
+  }
 }
