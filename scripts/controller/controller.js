@@ -94,4 +94,18 @@ export default class Controller {
       }
     });
   }
+  modalListener() {
+    const largeImage = document.querySelector("#largeImage");
+    const dialog = document.querySelector(".dialogContainer");
+    largeImage.addEventListener("click", () => {
+      dialog.showModal();
+      this.modalCloseListener(dialog);
+    });
+  }
+  modalCloseListener(dialog) {
+    const cancelBtn = document.querySelector(".cancelBtn");
+    cancelBtn.addEventListener("click", () => {
+      dialog.close();
+    });
+  }
 }
