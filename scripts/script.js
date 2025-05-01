@@ -1,5 +1,8 @@
+import Controller from "./controller/controller.js";
+import Cart from "./model/cart.js";
 import { data } from "./model/data.js";
 import Shoes from "./model/shoes.js";
+import Element from "./view/element.js";
 
 const shoesData = data[0];
 const firstShoes = new Shoes(
@@ -11,11 +14,24 @@ const firstShoes = new Shoes(
   shoesData.images
 );
 
-console.log(firstShoes);
-console.log(firstShoes.amount);
+const cart = new Cart();
+cart.addToTheCart(firstShoes);
 
-console.log((firstShoes.amount = 3));
+const homeImage = {
+  largeImage: ".largeProductImage",
+  thumbnailImage: ".thumbnailImage",
+};
 
-console.log(firstShoes.currentPrice);
+const modalImage = {
+  largeImage: ".modalPictureContainer",
+  thumbnailImage: ".modalThumbnail",
+};
 
-console.log(firstShoes.totalPrice);
+const controller = new Controller(cart);
+controller.incrementAmountListener();
+controller.decrementAmountListener();
+controller.addToTheCartListener();
+controller.thumbnailListener(homeImage.largeImage, homeImage.thumbnailImage);
+controller.thumbnailListener(modalImage.largeImage, modalImage.thumbnailImage);
+controller.imageSwapListener();
+controller.modalListener();
