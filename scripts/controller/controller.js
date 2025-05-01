@@ -68,6 +68,7 @@ export default class Controller {
     const imageAttribute = this.#cart.returnProductImages(SHOES_ID);
     const imageSrc = JSON.parse(JSON.stringify(imageAttribute));
     this.nextBtnListener(currentImageIndex, imageSrc, modalImgContainer);
+    this.previousBtnListener(currentImageIndex, imageSrc, modalImgContainer);
   }
   nextBtnListener(currentImageIndex, imageSrc, modalImgContainer) {
     this.nextBtn.addEventListener("click", () => {
@@ -76,6 +77,18 @@ export default class Controller {
           imageSrc[++currentImageIndex].original;
       } else {
         currentImageIndex = 0;
+        modalImgContainer.children[0].src =
+          imageSrc[currentImageIndex].original;
+      }
+    });
+  }
+  previousBtnListener(currentImageIndex, imageSrc, modalImgContainer) {
+    this.previousBtn.addEventListener("click", () => {
+      if (currentImageIndex > 0 && currentImageIndex <= 3) {
+        modalImgContainer.children[0].src =
+          imageSrc[--currentImageIndex].original;
+      } else {
+        currentImageIndex = 3;
         modalImgContainer.children[0].src =
           imageSrc[currentImageIndex].original;
       }
