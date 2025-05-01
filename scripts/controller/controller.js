@@ -37,6 +37,7 @@ export default class Controller {
       Element.removeElement(".cartContainer");
       this.cartView.createCartContainer(this.#cart.cart);
       this.removeItemListener();
+      this.checkoutListener();
     });
   }
   removeItemListener() {
@@ -106,6 +107,16 @@ export default class Controller {
     const cancelBtn = document.querySelector(".cancelBtn");
     cancelBtn.addEventListener("click", () => {
       dialog.close();
+    });
+  }
+  checkoutListener() {
+    const cartBody = document.querySelector(".cartBody");
+    const checkoutBtn = document.querySelector("#checkoutButton");
+    checkoutBtn.addEventListener("click", () => {
+      this.#cart.resetAllAmount();
+      Element.removeAllItem();
+      this.amountCart.textContent = "0";
+      cartBody.textContent = "Your cart is empty";
     });
   }
 }
