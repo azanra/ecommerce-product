@@ -9,6 +9,12 @@
   --Black: hsl(0, 0%, 0%);
   --Black-bg: hsl(0, 0%, 0%, 75%);
   --fontsize: 16px;
+  --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+body {
+  font-family: "Kumbh Sans", var(--system-ui);
 }
 
 .removeButton {
