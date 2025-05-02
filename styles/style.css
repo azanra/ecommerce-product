@@ -23,3 +23,15 @@ body {
   height: 25px;
   border: none;
 }
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.headerLogo,
+.headerAction {
+  display: flex;
+  align-items: center;
+}
