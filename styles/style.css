@@ -35,3 +35,19 @@ body {
   display: flex;
   align-items: center;
 }
+
+#headerCartProfile {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 50%;
+  border: 2px solid var(--Orange);
+}
+
+#headerCartProfile > img {
+  height: 50px;
+  width: 50px;
+}
