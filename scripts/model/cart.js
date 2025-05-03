@@ -58,4 +58,10 @@ export default class Cart {
       item.amount = 0;
     });
   }
+  returnAllItemAmount() {
+    const totalAmount = this.#cart.reduce((total, item) => {
+      return (total += item.amount);
+    }, 0);
+    return totalAmount;
+  }
 }

@@ -8,6 +8,7 @@ export default class Controller {
   addToCartBtn = document.querySelector(".addToCartBtn");
   nextBtn = document.querySelector(".nextBtn");
   previousBtn = document.querySelector(".previousBtn");
+  headerCartAmount = document.querySelector("#headerCartAmount");
   cartView = new Element();
   constructor(cart) {
     this.#cart = cart;
@@ -38,6 +39,7 @@ export default class Controller {
       this.cartView.createCartContainer(this.#cart.cart);
       this.removeItemListener();
       this.checkoutListener();
+      this.headerCartAmount.textContent = this.#cart.returnAllItemAmount();
     });
   }
   removeItemListener() {
@@ -116,6 +118,7 @@ export default class Controller {
       this.#cart.resetAllAmount();
       Element.removeAllItem();
       this.amountCart.textContent = "0";
+      this.headerCartAmount.textContent = "";
       cartBody.textContent = "Your cart is empty";
     });
   }
