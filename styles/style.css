@@ -28,6 +28,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  margin-bottom: 100px;
+  height: 100px;
 }
 
 .headerLogo,
@@ -66,6 +68,15 @@ body {
 
 .headerLink {
   gap: 25px;
+  margin-left: 75px;
+}
+
+#headerCartAmount {
+  position: relative;
+  right: 65px;
+  bottom: 18px;
+  border-radius: 25px;
+  padding: 0 5px;
 }
 
 .headerLink > div {
