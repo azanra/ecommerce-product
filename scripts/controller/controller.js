@@ -40,6 +40,8 @@ export default class Controller {
       this.removeItemListener();
       this.checkoutListener();
       this.headerCartAmount.textContent = this.#cart.returnAllItemAmount();
+      this.headerCartAmount.style.background = "orange";
+      this.headerCartAmount.style.color = "white";
     });
   }
   removeItemListener() {
@@ -50,6 +52,8 @@ export default class Controller {
         this.#cart.removeFromTheCart(itemId);
         Element.removeAllItem();
         Element.setTextContent(this.amountCart, "0");
+        this.headerCartAmount.style.background = "white";
+        this.headerCartAmount.style.color = "white";
       });
     });
   }
@@ -119,6 +123,8 @@ export default class Controller {
       Element.removeAllItem();
       this.amountCart.textContent = "0";
       this.headerCartAmount.textContent = "";
+      this.headerCartAmount.style.background = "white";
+      this.headerCartAmount.style.color = "orange";
       cartBody.textContent = "Your cart is empty";
     });
   }
