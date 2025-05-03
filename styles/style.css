@@ -51,3 +51,13 @@ body {
   height: 50px;
   width: 50px;
 }
+
+#headerCartBtn {
+  border: none;
+  background: none;
+  margin-right: 50px;
+}
+
+#iconCart > path:hover {
+  fill: black;
+}
