@@ -95,3 +95,18 @@ a:hover {
 .headerLink > div:hover {
   border-bottom: 1px solid var(--Orange);
 }
+
+.body,
+.thumbnailContainer,
+.footerModal {
+  display: flex;
+}
+
+.largeProductImage {
+  display: flex;
+  justify-content: center;
+}
+
+#largeImage {
+  width: 400px;
+}
