@@ -31,7 +31,9 @@ body {
 }
 
 .headerLogo,
-.headerAction {
+.headerAction,
+.headerLink,
+.headerLink > div {
   display: flex;
   align-items: center;
 }
@@ -60,4 +62,25 @@ body {
 
 #iconCart > path:hover {
   fill: black;
+}
+
+.headerLink {
+  gap: 25px;
+}
+
+.headerLink > div {
+  height: 55px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--Dark-grayish-blue);
+}
+
+a:hover {
+  color: var(--Very-dark-blue);
+}
+
+.headerLink > div:hover {
+  border-bottom: 1px solid var(--Orange);
 }
