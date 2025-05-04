@@ -162,3 +162,26 @@ a:hover {
 .productDescText {
   margin-bottom: 30px;
 }
+
+.containerPriceText {
+  display: flex;
+  align-items: center;
+}
+
+.containerPriceText {
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.productPriceText {
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+.containerDiscountText {
+  padding: 3px 10px;
+  background-color: var(--Black);
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+}
