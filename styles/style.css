@@ -102,11 +102,36 @@ a:hover {
   display: flex;
 }
 
+.body {
+  width: 100vw;
+}
+
+.productImageContainer,
+.productActionContainer {
+  width: 50%;
+}
+
 .largeProductImage {
   display: flex;
   justify-content: center;
 }
 
+#largeImage,
+.thumbnailImage {
+  border-radius: 25px;
+}
+
 #largeImage {
-  width: 400px;
+  width: 500px;
+}
+
+.thumbnailImage {
+  width: 100px;
+}
+
+.thumbnailContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
 }
