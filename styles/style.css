@@ -143,7 +143,8 @@ a:hover {
 .thumbnailContainer,
 .incrementAction,
 .decrementAction,
-.amountCartText {
+.amountCartText,
+.addToCartBtn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -217,4 +218,20 @@ a:hover {
 .amountCartText {
   width: 30px;
   text-align: center;
+}
+
+.addToCartBtn {
+  width: 100%;
+  height: 40px;
+  border: none;
+  background-color: var(--Orange);
+  gap: 10px;
+  color: black;
+  font-weight: bold;
+  font-size: 15px;
+  border-radius: 5px;
+}
+
+.addToCartBtn > svg > path {
+  fill: black;
 }
