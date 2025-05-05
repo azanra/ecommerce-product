@@ -40,7 +40,10 @@ h2 {
 .headerLogo,
 .headerAction,
 .headerLink,
-.headerLink > div {
+.headerLink > div,
+.containerPriceText,
+.actionCartContainer,
+.amountCartText {
   display: flex;
   align-items: center;
 }
@@ -102,8 +105,8 @@ a:hover {
 }
 
 .body,
-.thumbnailContainer,
-.footerModal {
+.footerModal,
+.amountCartContainer {
   display: flex;
 }
 
@@ -137,10 +140,16 @@ a:hover {
   width: 100px;
 }
 
-.thumbnailContainer {
+.thumbnailContainer,
+.incrementAction,
+.decrementAction,
+.amountCartText {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.thumbnailContainer {
   gap: 25px;
   margin-top: 30px;
 }
@@ -162,12 +171,6 @@ a:hover {
 
 .productDescText {
   margin-bottom: 30px;
-}
-
-.containerPriceText,
-.actionCartContainer {
-  display: flex;
-  align-items: center;
 }
 
 .containerPriceText {
@@ -196,8 +199,22 @@ a:hover {
 .amountCartContainer {
   width: 38%;
   margin-right: 20px;
+  background-color: var(--Light-grayish-blue);
 }
 
 .checkoutContainer {
   width: 60%;
+}
+
+.incrementAction,
+.decrementAction {
+  width: 40%;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+}
+
+.amountCartText {
+  width: 30px;
+  text-align: center;
 }
