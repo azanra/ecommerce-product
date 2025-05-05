@@ -150,7 +150,8 @@ a:hover {
 }
 
 .companyText,
-.productDescText {
+.productDescText,
+.originalPriceText {
   color: var(--Dark-grayish-blue);
 }
 
@@ -163,7 +164,8 @@ a:hover {
   margin-bottom: 30px;
 }
 
-.containerPriceText {
+.containerPriceText,
+.actionCartContainer {
   display: flex;
   align-items: center;
 }
@@ -184,4 +186,18 @@ a:hover {
   color: white;
   font-weight: bold;
   border-radius: 5px;
+}
+
+.originalPriceText {
+  margin-bottom: 60px;
+  font-weight: bold;
+}
+
+.amountCartContainer {
+  width: 38%;
+  margin-right: 20px;
+}
+
+.checkoutContainer {
+  width: 60%;
 }
