@@ -146,7 +146,9 @@ a:hover {
 .decrementAction,
 .amountCartText,
 .addToCartBtn,
-.dialogWrapper {
+.dialogWrapper,
+.previousBtn,
+.nextBtn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -252,19 +254,32 @@ a:hover {
 .cancelContainer {
   display: flex;
   justify-content: end;
-  margin-right: 30px;
+  margin-right: 40px;
   margin-bottom: 30px;
+}
+
+.cancelBtn {
+  background-color: transparent;
+  border: none;
+}
+
+.cancelBtn > svg > path {
+  fill: white;
 }
 
 .previousBtn,
 .nextBtn {
   position: relative;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  border: none;
 }
 
 .nextBtn {
-  right: 18px;
+  right: 27px;
 }
 
 .previousBtn {
-  left: 12px;
+  left: 25px;
 }
