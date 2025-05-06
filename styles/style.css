@@ -144,7 +144,8 @@ a:hover {
 .incrementAction,
 .decrementAction,
 .amountCartText,
-.addToCartBtn {
+.addToCartBtn,
+.dialogWrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -234,4 +235,15 @@ a:hover {
 
 .addToCartBtn > svg > path {
   fill: black;
+}
+
+.dialogContainer {
+  border: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(0, 0, 0, 0.6);
+}
+
+.dialogWrapper {
+  margin-top: 5%;
 }
