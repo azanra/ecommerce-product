@@ -43,7 +43,8 @@ h2 {
 .headerLink > div,
 .containerPriceText,
 .actionCartContainer,
-.amountCartText {
+.amountCartText,
+.bodyModal {
   display: flex;
   align-items: center;
 }
@@ -246,4 +247,24 @@ a:hover {
 
 .dialogWrapper {
   margin-top: 5%;
+}
+
+.cancelContainer {
+  display: flex;
+  justify-content: end;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.previousBtn,
+.nextBtn {
+  position: relative;
+}
+
+.nextBtn {
+  right: 18px;
+}
+
+.previousBtn {
+  left: 12px;
 }
