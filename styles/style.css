@@ -150,7 +150,8 @@ a:hover {
 .previousBtn,
 .nextBtn,
 .itemContainer,
-.productImage {
+.productImage,
+.checkoutContainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -304,4 +305,18 @@ a:hover {
 .itemContainer {
   padding: 20px 30px;
   gap: 20px;
+}
+
+.checkoutContainer {
+  width: 100%;
+}
+
+#checkoutButton {
+  width: 325px;
+  height: 45px;
+  margin: 10px 0px 30px;
+  background-color: var(--Orange);
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
 }
