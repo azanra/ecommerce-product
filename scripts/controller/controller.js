@@ -40,6 +40,13 @@ export default class Controller {
       this.cartView.createCartContainer(this.#cart.cart);
       this.removeItemListener();
       this.checkoutListener();
+      this.exitCartBtnListener();
+    });
+  }
+  exitCartBtnListener() {
+    const exitCartBtn = document.querySelector("#cartExitBtn");
+    exitCartBtn.addEventListener("click", () => {
+      Element.removeElement(".cartContainer");
     });
   }
   addToTheCartListener() {
