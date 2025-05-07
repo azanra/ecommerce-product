@@ -296,6 +296,16 @@ a:hover {
 .cartHeader {
   padding: 15px 30px;
   border-bottom: 1px solid var(--Grayish-blue);
+  display: flex;
+  justify-content: space-between;
+}
+
+#cartExitBtn {
+  border: none;
+  background-color: red;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
 }
 
 .productImage {
