@@ -16,6 +16,16 @@ export const attribute = {
     textContent: "Cart",
     uniqueParent: false,
   },
+  cartExit: {
+    parent: ".cartHeader",
+    element: "button",
+    attributeElement: {
+      type: "button",
+      id: "cartExitBtn",
+    },
+    textContent: "X",
+    uniqueParent: "false",
+  },
   cartBody: {
     parent: ".cartContainer",
     element: "div",

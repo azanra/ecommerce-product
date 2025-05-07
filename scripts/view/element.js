@@ -71,6 +71,7 @@ export default class Element {
   createCartContainer(cart) {
     Element.createElement(attribute.cartContainer);
     Element.createElement(attribute.cartHeader);
+    Element.createElement(attribute.cartExit);
     Element.createElement(attribute.cartBody);
     if (cart.length > 0) {
       cart.map((item) => {
