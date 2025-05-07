@@ -34,3 +34,4 @@ controller.thumbnailListener(homeImage.largeImage, homeImage.thumbnailImage);
 controller.thumbnailListener(modalImage.largeImage, modalImage.thumbnailImage);
 controller.imageSwapListener();
 controller.modalListener();
+controller.headerCartBtnListener();

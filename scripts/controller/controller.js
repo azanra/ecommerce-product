@@ -33,12 +33,17 @@ export default class Controller {
       this.amountCart.textContent = this.#cart.returnItemAmount(itemId);
     });
   }
-  addToTheCartListener() {
-    this.addToCartBtn.addEventListener("click", () => {
+  headerCartBtnListener() {
+    const headerCartBtn = document.querySelector("#headerCartBtn");
+    headerCartBtn.addEventListener("click", () => {
       Element.removeElement(".cartContainer");
       this.cartView.createCartContainer(this.#cart.cart);
       this.removeItemListener();
       this.checkoutListener();
+    });
+  }
+  addToTheCartListener() {
+    this.addToCartBtn.addEventListener("click", () => {
       this.headerCartAmount.textContent = this.#cart.returnAllItemAmount();
       this.headerCartAmount.style.background = "orange";
       this.headerCartAmount.style.color = "white";
