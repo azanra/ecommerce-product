@@ -295,6 +295,7 @@ a:hover {
 
 .cartHeader {
   padding: 15px 30px;
+  border-bottom: 1px solid var(--Grayish-blue);
 }
 
 .productImage {

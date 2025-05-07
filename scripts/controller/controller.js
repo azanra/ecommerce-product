@@ -125,7 +125,9 @@ export default class Controller {
       this.headerCartAmount.textContent = "";
       this.headerCartAmount.style.background = "white";
       this.headerCartAmount.style.color = "orange";
+      cartBody.style.padding = "50px 100px";
       cartBody.textContent = "Your cart is empty";
+      cartBody.style.color = "hsl(219, 9%, 45%)";
     });
   }
 }
