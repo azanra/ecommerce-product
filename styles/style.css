@@ -24,6 +24,10 @@ body {
   border: none;
 }
 
+.removeButton:hover {
+  border: 1px solid black;
+}
+
 p,
 h2 {
   margin: 0;
@@ -57,6 +61,9 @@ h2 {
   align-items: center;
   border: none;
   border-radius: 50%;
+}
+
+#headerCartProfile:hover {
   border: 2px solid var(--Orange);
 }
 
@@ -145,7 +152,8 @@ a:hover {
   filter: brightness(0.5);
 }
 
-.addToCartBtn:hover {
+.addToCartBtn:hover,
+#checkoutButton:hover {
   background-color: var(--Pale-orange);
 }
 
@@ -300,6 +308,15 @@ a:hover {
   left: 25px;
 }
 
+.cancelBtn path:hover {
+  fill: var(--Orange);
+}
+
+.nextBtn path:hover,
+.previousBtn path:hover {
+  stroke: var(--Orange);
+}
+
 .cart {
   position: absolute;
   top: 100px;
@@ -319,6 +336,10 @@ a:hover {
   border-radius: 5px;
   color: white;
   font-weight: bold;
+}
+
+#cartExitBtn:hover {
+  background-color: rgb(245, 135, 135);
 }
 
 .productImage {
