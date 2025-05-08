@@ -141,6 +141,19 @@ a:hover {
   width: 100px;
 }
 
+.thumbnailImage:hover {
+  filter: brightness(0.5);
+}
+
+.addToCartBtn:hover {
+  background-color: var(--Pale-orange);
+}
+
+.incrementAction use:hover,
+.decrementAction use:hover {
+  fill: var(--Pale-orange);
+}
+
 .thumbnailContainer,
 .incrementAction,
 .decrementAction,
