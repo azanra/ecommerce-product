@@ -74,6 +74,9 @@ export default class Controller {
     const thumbnailImage = document.querySelectorAll(thumbnailImageElement);
     thumbnailImage.forEach((item) => {
       item.addEventListener("click", () => {
+        //TODO
+        //Changing the image from the url in webpack doesn't work since it hash the name by default
+        //and the image that will be used for large image is a thumbnail image causing the blurred large image
         const thumbnailImage = item.children[0].src;
         const imgUrl = thumbnailImage.replace("-thumbnail", "");
         largeProductImage.children[0].src = imgUrl;
