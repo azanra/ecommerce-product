@@ -2,6 +2,7 @@ import Controller from "./controller/controller.js";
 import Cart from "./model/cart.js";
 import { data } from "./model/data.js";
 import Shoes from "./model/shoes.js";
+import "./style.css";
 
 const shoesData = data[0];
 const firstShoes = new Shoes(
