@@ -14,7 +14,12 @@
   },
   "scripts": {
     "start": "webpack serve --open --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js"
+    "build": "webpack --config webpack.prod.js",
+    "branch": "git branch gh-pages",
+    "postbranch": "git checkout gh-pages && git merge main --no-edit && npm run build",
+    "deploy": "git add dist -f && git commit",
+    "postdeploy": "git subtree push --prefix dist origin gh-pages",
+    "gh-pages": "npm run branch && npm run deploy && git checkout main"
   },
   "repository": {
     "type": "git",
